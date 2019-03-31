@@ -33,7 +33,7 @@ struct TestEvent : qbm::timer::event::Timed
 class TestActor : public qb::Actor {
     const qb::ActorId _to;
 public:
-    TestActor(qb::CoreId const core = 0)
+    explicit TestActor(qb::CoreId const core = 0)
             : _to(getServiceId<qbm::timer::service::Tag>(core))
     {}
 

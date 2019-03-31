@@ -29,7 +29,7 @@ namespace qbm {
                 uint64_t time_id;
             public:
                 Cancel() = delete;
-                Cancel(uint64_t const id)
+                explicit Cancel(uint64_t const id)
                         : time_id(id) {}
 
                 uint64_t getTimeId() const {
